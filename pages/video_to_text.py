@@ -7,7 +7,7 @@ def download_mp3_from_youtube(url):
     stream.download(filename='audio.mp3')
     
 def speech_to_text(openai_client, file):
-    client = openai_client#OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+    client = openai_client
     audio_file= open(file, "rb")
     transcription = client.audio.transcriptions.create(
         model="whisper-1", 
@@ -17,14 +17,15 @@ def speech_to_text(openai_client, file):
 
 def render(openai_client):
     st.header('Read Youtube Video', divider='rainbow')
-    # Input to typing OpenAI Key
-    openai_key = st.text_input("OpenAI Key:", "")
+    
     # Input to typing Youtube URL
-    youtube_url = st.text_input("Youtube URL:", "")
+    youtube_url = st.text_input("Youtube URL:")
+    
     # Output language
     option = st.selectbox(
         'Output Language:',
         ('English', 'Spanish', 'French'))
+    
     # Buton to download mp3 from video
     if st.button("Read Video!"):
         download_mp3_from_youtube(youtube_url)
