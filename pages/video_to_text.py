@@ -1,5 +1,6 @@
 from pytube import YouTube
 import streamlit as st
+import json
 
 def download_mp3_from_youtube(url):
     yt = YouTube(url)
@@ -11,8 +12,11 @@ def speech_to_text(openai_client, file):
     audio_file= open(file, "rb")
     transcription = client.audio.transcriptions.create(
         model="whisper-1", 
-        file=audio_file
+        file=audio_file,
+        response_format="verbose_json",
+        timestamp_granularities=["segment"]
     )
+    print(json.dumps(transcription.segments, indent=4))
     return transcription.text
 
 def render(openai_client):
