@@ -1,0 +1,51 @@
+{
+    "videoId": "DC471a9qrU4",
+    "title": "Array Map in 100 Seconds",
+    "lengthSeconds": "100",
+    "keywords": [
+        "webdev",
+        "javascript",
+        "array map",
+        "js map",
+        "array map tutorial",
+        "100 seconds of code",
+        "100 days of code",
+        "loop",
+        "compsci",
+        "computer science"
+    ],
+    "channelId": "UCsBjURrPoezykLs9EqgamOA",
+    "isOwnerViewing": false,
+    "shortDescription": "Learn Array Map in 100 seconds (of JavaScript). ⚡\n\n#JavaScript #100SecondsOfCode\n\nInstall the quiz app 🤓\n\niOS https://itunes.apple.com/us/app/fireship/id1462592372?mt=8\nAndroid https://play.google.com/store/apps/details?id=io.fireship.quizapp\n\nUpgrade to Fireship PRO at https://fireship.io/pro\nUse code lORhwXd2 for 25% off your first payment. \n\nMy VS Code Theme\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font",
+    "isCrawlable": true,
+    "thumbnail": {
+        "thumbnails": [
+            {
+                "url": "https://i.ytimg.com/vi/DC471a9qrU4/default.jpg",
+                "width": 120,
+                "height": 90
+            },
+            {
+                "url": "https://i.ytimg.com/vi/DC471a9qrU4/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+            },
+            {
+                "url": "https://i.ytimg.com/vi/DC471a9qrU4/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+            },
+            {
+                "url": "https://i.ytimg.com/vi/DC471a9qrU4/sddefault.jpg",
+                "width": 640,
+                "height": 480
+            }
+        ]
+    },
+    "allowRatings": true,
+    "viewCount": "313437",
+    "author": "Fireship",
+    "isPrivate": false,
+    "isUnpluggedCorpus": false,
+    "isLiveContent": false
+}
