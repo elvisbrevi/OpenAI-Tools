@@ -1,0 +1,124 @@
+1
+00:00:00,000 --> 00:00:00,000
+ArrayMap, crea un nuevo array llamando a una función en cada elemento de un array diferente.
+
+2
+00:00:00,000 --> 00:00:00,000
+ Imagina que tenemos un array de cuadrados.
+
+3
+00:00:00,000 --> 00:00:00,000
+ Podemos llamar a una función en cada uno de esos cuadrados usando map para convertirlo en
+
+4
+00:00:00,000 --> 00:00:00,000
+ un nuevo array de círculos.
+
+5
+00:00:00,000 --> 00:00:00,000
+ En otras palabras, es solo un bucle, donde el objetivo de ese bucle es crear un nuevo array.
+
+6
+00:00:00,000 --> 00:00:00,000
+ En nuestro código, comencemos con un array de objetos que contiene algunos datos de usuario.
+
+7
+00:00:00,000 --> 00:00:00,000
+ Nuestro objetivo es tomar este array de objetos y convertirlo en un array de cadenas que
+
+8
+00:00:00,000 --> 00:00:00,000
+ solo contenga los nombres de usuario.
+
+9
+00:00:00,000 --> 00:00:00,000
+ Podríamos hacer esto imperativamente creando un nuevo array vacío, luego usar un bucle for para
+
+10
+00:00:00,000 --> 00:00:00,000
+ agregar cada nombre de usuario individual al nuevo array.
+
+11
+00:00:00,000 --> 00:00:00,000
+ Observa cómo estamos usando declaraciones para cambiar el estado de la aplicación.
+
+12
+00:00:00,000 --> 00:00:00,000
+ Esto se conoce como programación imperativa.
+
+13
+00:00:00,000 --> 00:00:00,000
+ Map, por otro lado, es declarativo y describe cómo crear este nuevo array usando
+
+14
+00:00:00,000 --> 00:00:00,000
+ una función.
+
+15
+00:00:00,000 --> 00:00:00,000
+ El nuevo array es igual al array original mapeado a una función.
+
+16
+00:00:00,000 --> 00:00:00,000
+ La función se pasa como un argumento a map, y se llama en cada elemento del array original.
+
+17
+00:00:00,000 --> 00:00:00,000
+ Cada función tiene acceso al elemento actual en el bucle así como a su índice.
+
+18
+00:00:00,000 --> 00:00:00,000
+ En el cuerpo de la función, tu tarea es calcular un nuevo valor y luego devolverlo.
+
+19
+00:00:00,000 --> 00:00:00,000
+ Y ahora hemos resuelto el mismo problema que hicimos con el bucle for, pero con menos código
+
+20
+00:00:00,000 --> 00:00:00,000
+ y sin mutar el estado interno.
+
+21
+00:00:00,000 --> 00:00:00,000
+ Si eres un usuario de React.js, a menudo verás map usado para tomar algunos datos iniciales y
+
+22
+00:00:00,000 --> 00:00:00,000
+ luego mapearlos a JSX para la interfaz de usuario real.
+
+23
+00:00:00,000 --> 00:00:00,000
+ O tal vez necesites estos nombres de usuario para hacer algo de forma asíncrona, como obtener datos adicionales
+
+24
+00:00:00,000 --> 00:00:00,000
+ de la base de datos.
+
+25
+00:00:00,000 --> 00:00:00,000
+ Podrías hacer eso mapeándolos todos a un array de promesas, luego ejecutándolos concurrentemente
+
+26
+00:00:00,000 --> 00:00:00,000
+ con promise.all.
+
+27
+00:00:00,000 --> 00:00:00,000
+ Un anti-patrón a tener en cuenta con map es que solo debes usarlo si planeas
+
+28
+00:00:00,000 --> 00:00:00,000
+ usar el nuevo array.
+
+29
+00:00:00,000 --> 00:00:00,000
+ Si solo necesitas ejecutar un bucle, considera usar for each o un bucle for regular en su lugar.
+
+30
+00:00:00,000 --> 00:00:00,000
+ Esto ha sido ArrayMap en 100 segundos.
+
+31
+00:00:00,000 --> 00:00:00,000
+ Gracias por ver, y nos vemos en el próximo.
+

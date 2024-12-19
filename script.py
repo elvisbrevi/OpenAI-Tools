@@ -37,11 +37,9 @@ class Home:
     def render(self):
         # header
         st.header('Read Youtube Video', divider='rainbow')
-
+        
         # input for openai key
         openai_key = st.text_input("OpenAI Key:", os.environ.get("OPENAI_API_KEY"))
-        openai_helper = OpenAIHelper(openai_key)
-        
         # input for youtube url
         youtube_url = st.text_input("Youtube URL:")
         
@@ -50,15 +48,12 @@ class Home:
             with st.spinner('Extracting audio...'):
                 # download mp3 from video
                 self.download_mp3_from_youtube(youtube_url)
-            with st.spinner('Speech to text...'):
-                # transcription from video (openai speech to text)
-                if not os.path.exists(f"{self.video_id}_transcription.json"):
-                    print(f"Transcripting {self.video_id}.mp3 to {self.video_id}_transcription.json ...")
-                    text = openai_helper.speech_to_text(self.video_id)
-                    with open(f"{self.video_id}_transcription.json", "w", encoding="utf-8") as json_file:
-                        json.dump(text, json_file, indent=4, ensure_ascii=False)
-                else:
-                    print(f"El archivo {self.video_id}_transcription.json ya existe. No se generará nuevamente.")
+            with st.spinner('Making subtitles...'):
+                openai_helper = OpenAIHelper(openai_key, self.video_id, "es")
+                # create srt file
+                openai_helper.create_srt_file()
+                    
+                
 
 home = Home()
 home.render()
